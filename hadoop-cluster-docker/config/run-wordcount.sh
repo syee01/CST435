@@ -17,8 +17,7 @@ hdfs dfs -put -f ./input/* input
 start_time=$(($(date +%s%N)/1000000))
 
 # run wordcount 
-#hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.7.2-sources.jar org.apache.hadoop.examples.WordCount input output
-hadoop jar /root/WordCount-1.0-SNAPSHOT.jar org.apache.hadoop.examples.WordCount input output
+hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/sources/hadoop-mapreduce-examples-2.7.2-sources.jar org.apache.hadoop.examples.WordCount input output
 
 # print the input files
 echo -e "\ninput file1.txt:"
