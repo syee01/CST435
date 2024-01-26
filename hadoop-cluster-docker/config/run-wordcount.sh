@@ -34,7 +34,7 @@ hdfs dfs -cat output/part-r-00000
 # Record end time
 end_time=$(($(date +%s%N)/1000000))
 
-duration=$((end_time - start_time - 8238))
+duration=$((end_time - start_time))
 echo -e "\nScript started at: $(date -d @$((start_time/1000)))" # Convert start time back to seconds for human-readable format
 echo -e "Script ended at: $(date -d @$((end_time/1000)))" # Convert end time back to seconds for human-readable format
 echo -e "Total duration: $duration milliseconds"
